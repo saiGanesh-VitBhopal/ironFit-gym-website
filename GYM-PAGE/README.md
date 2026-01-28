@@ -5,7 +5,7 @@ This project focuses on component-based architecture, clean UI structure, and re
 
 ---
 
-## 🚀 Features
+##  Features
 
 - Responsive gym landing page
 - Clean and modern UI
@@ -15,14 +15,14 @@ This project focuses on component-based architecture, clean UI structure, and re
 
 ---
 
-## 🧱 Tech Stack
+##  Tech Stack
 
 - **React** (with Vite)
 - **JavaScript (ES6)**
 - **CSS**
 - **HTML5**
 
-## 🧩 Components Overview
+##  Components Overview
 
 - **Navbar** – Navigation bar with gym branding and links
 - **Hero** – Landing section with gym tagline and call-to-action
@@ -33,7 +33,7 @@ This project focuses on component-based architecture, clean UI structure, and re
 
 ---
 
-## 🛠️ Installation & Setup
+##  Installation & Setup
 
 1. Clone the repository
 ```bash
@@ -55,5 +55,4 @@ http://localhost:5173
 
 
 
-## 📂 Project Structure
 
