@@ -1,0 +1,134 @@
+.hero {
+  position: relative;
+  min-height: calc(100vh - 90px);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+}
+.hero-video {
+  position: absolute;
+  top: 1000;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(255, 107, 0, 0.15),
+    rgba(0, 0, 0, 0.92)
+  );
+  z-index: -1;
+}
+.hero-content {
+  max-width: 700px;
+  color: white;
+}
+.hero-title {
+  font-size: 3.8rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  opacity: 0;
+  animation:
+    fadeIn 1s ease-out forwards,
+    floatText 4s ease-in-out infinite;
+  animation-delay: 0s, 1.2s; 
+}
+.hero-title span {
+  color: #ff6b00;
+}
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: #cccccc;
+  line-height: 1.7;
+  margin-bottom: 35px;
+
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.hero-subtitle strong {
+  background: linear-gradient(90deg, #ff6b00, #ff3300);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+
+  opacity: 0;
+  animation: fadeIn 1.4s ease-out forwards;
+  animation-delay: 0.4s;
+}
+.hero-buttons a {
+  text-decoration: none;
+}
+.btn-primary,
+.btn-secondary {
+  background: linear-gradient(90deg, #ff6b00, #ff3300);
+  border: 2px solid transparent;
+  padding: 12px 32px;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.35s ease;
+  color: black;
+}
+.btn-primary:hover,
+.btn-secondary:hover {
+  background: transparent;
+  border: 2px solid #ff6b00;
+  color: #ff6b00;
+  box-shadow: 0 0 15px rgba(255, 107, 0, 0.6);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.6rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: fit-content;
+  }
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+  z-index: 0;
+}
+@keyframes floatText {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

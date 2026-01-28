@@ -1,0 +1,19 @@
+.footer {
+  background: #050505;
+  padding: 25px 8%;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.footer p {
+  font-size: 0.95rem;
+  color: #aaaaaa;
+  letter-spacing: 0.4px;
+}
+.footer p::before {
+  content: "© ";
+  color: #ff6b00;
+  margin-right: 2px;
+}
+.footer p:hover {
+  color: white;
+}

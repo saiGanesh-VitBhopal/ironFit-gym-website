@@ -1,0 +1,13 @@
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Offset for fixed navbar (90px navbar height) */
+section {
+  scroll-margin-top: 90px;
+}
+
+div[id] {
+  scroll-margin-top: 90px;
+}
